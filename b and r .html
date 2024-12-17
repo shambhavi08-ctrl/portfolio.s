@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding and Rebranding Carousel Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8dfd6;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .layout-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            padding: 8vh;
+        }
+
+        .text-section {
+            flex: 1;
+            max-width: 45%;
+            background-color: #fff;
+            color: #c2505d;
+            padding: 6vh;
+            border-radius: 3vh;
+            box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.1);
+        }
+
+        .text-section h2 {
+            font-size: 5vh;
+            font-weight: bold;
+            margin-bottom: 3vh;
+        }
+
+        .text-section p {
+            line-height: 1.8;
+            font-size: 2.5vh;
+        }
+
+        .carousel-container {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .carousel img {
+            border-radius: 3vh;
+            box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .layout-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text-section {
+                max-width: 90%;
+                margin-bottom: 5vh;
+            }
+
+            .carousel-container {
+                max-width: 90%;
+            }
+        }
+
+        .featured-projects {
+            background-color: #fff;
+            padding: 5vh;
+            border-radius: 2vh;
+            box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.1);
+            margin-top: 5vh;
+            width: 100%;
+        }
+
+        .featured-projects h3 {
+            font-size: 3rem;
+            color: #c2505d;
+            font-weight: bold;
+            margin-bottom: 2vh;
+        }
+
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3vw;
+            justify-content: space-between;
+        }
+
+        .project-item {
+            flex: 1;
+            max-width: 30%;
+            background-color: #f4f4f4;
+            padding: 3vh;
+            border-radius: 2vh;
+            box-shadow: 0 2vh 3vh rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .project-item h4 {
+            font-size: 2rem;
+            color: #c2505d;
+            font-weight: bold;
+            margin-bottom: 1vh;
+        }
+
+        .project-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0 4vh 6vh rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+            background-color: #f0f0f0; /* Change background color */
+        }
+        .arrow-container {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid #c2505d;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+
+        /* Footer Link */
+        .footer-link {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-link a {
+            text-decoration: none;
+            color: #c2505d;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Main Content Section (Text and Carousel) -->
+    <div class="layout-container">
+        <!-- Text Section -->
+        <div class="text-section">
+            <h2>Branding and Rebranding</h2>
+            <p>
+                A collection of branding and rebranding projects I’ve worked on for diverse brands like Lipton Green Tea,
+                Emeri Jewellery, and Skyline Architects. This section showcases my approach to crafting compelling visual
+                identities and packaging solutions that resonate with target audiences. Each project reflects my academic
+                and observership experience, where I’ve combined creativity with strategic design principles to bring
+                brands to life through logos, packaging, and other visual elements. Take a closer look at how I transform
+                brand concepts into engaging, memorable designs.
+            </p>
+        </div>
+
+        <!-- Carousel Section -->
+        <div class="carousel-container">
+            <div id="brandingCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./Screenshot 2024-12-03 192619.png" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Screenshot 2024-12-03 192728.png" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Screenshot 2024-12-03 193355.png" class="d-block w-100" alt="Image 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#brandingCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#brandingCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Projects Section -->
+    <div class="featured-projects" id="projects">
+        <h3>Featured Projects</h3>
+        <div class="project-list">
+            <div class="project-item">
+                <a href="./lipton align.html" class="project-link">
+                    <h4>Lipton Green Tea</h4>
+                    <p>A complete redesign of the brand identity and packaging that reflects natural ingredients and refreshment.</p>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="./je.html" class="project-link">
+                    <h4>Emeri Jewellery</h4>
+                    <p>Branding and logo design that blends luxury and simplicity, aimed at a high-end market.</p>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="./ccc.html" class="project-link">
+                    <h4>Skyline Architects</h4>
+                    <p>Rebranding project that modernized their logo and website to reflect their innovative architectural style.</p>
+                </a>
+            </div>
+        </div>
+    </div> <div class="arrow-container">
+        <a href="./pp.html" class="arrow-link">
+            <div class="arrow"></div> <!-- Replace 'yourpage.html' with your desired link -->
+        </a>
+    </div>
+
+    <!-- Footer Link -->
+    <div class="footer-link">
+        <a href="https://shambhavi08-ctrl.github.io/Portfolio/">HOME PAGE </a>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
